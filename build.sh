@@ -84,7 +84,7 @@ cp cc1plus ${COMPILER_INSTALL_PATH}/bin/cc1plus
 #done...?
 echo -e "\n\nHopefully, everything worked correctly and\ngcc was compiled and installed successfully (Ignore the error it spits out above, that's just gcc's tests throwing a fit about paths. The compiler is what we need, and hopefully it was copied over by this script).\nHowever, there are still some more steps\nyou need to take."
 echo -e "\n\nOn your actual PowerPC Mac, you must have XCode installed\n(preferrably whatever version of XCode\nthe version of gcc you compiled came with)."
-echo -e "\nThen, using ftp or ssh, copy the files from\nyour Mac's /usr/include folder to $COMPILER_INSTALL_PATH/include."
+echo -e "\nThen, using ftp or ssh, copy the files from\nyour Mac's /usr/include folder to $COMPILER_INSTALL_PATH/powerpc-apple-darwin/include."
 echo -e "\n\nOnce that's done, you are technically\ndone setting up the cross-compiler on\nyour Linux machine.\n\nHOWEVER..."
 echo -e "\n\nAlthough you can cross-compile to mac\njust fine, the linker from\ncctools-port does not work for powerpc targets."
 echo -e "\n\nSo, to compile stuff for Mac, you must\nhave a step in your makefile\nto copy stuff over to your mac\nvia ssh and then run your mac's internal ld\ncommand via ssh."
