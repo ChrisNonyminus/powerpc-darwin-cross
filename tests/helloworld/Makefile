@@ -16,7 +16,7 @@ $(error "Set MAC_SSH_SERVER to the ssh server of your mac, following the format 
 endif
 
 CC=/opt/powerpc-darwin-cross/bin/g++
-CFLAGS=-I/opt/powerpc-darwin-cross/powerpc-apple-darwin/include -I/opt/powerpc-darwin-cross/powerpc-apple-darwin/include/c++/4.0.0 -I/opt/powerpc-darwin-cross/powerpc-apple-darwin/include/c++/4.0.0/powerpc-apple-darwin8 -I/opt/powerpc-darwin-cross/powerpc-apple-darwin/include/gcc/darwin/3.3 --verbose
+CFLAGS=--verbose
 #only execute ld from your mac (via ssh)
 LD=cc
 LFLAGS=-L/usr/lib -L/usr/lib/gcc/powerpc-apple-darwin8/4.0.1 -lstdc++ -lsystem -lgcc -lgcc_s.10.4 -lc -o test
